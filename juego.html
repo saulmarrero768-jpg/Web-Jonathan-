@@ -1,0 +1,45 @@
+<nav>
+    <ul>
+ <li><a href="#CONTACTO">CONTACTO</a></li>
+ </ul>
+ </nav>
+ 
+ <a href="https://wa.me/58736471" 
+ target=blank"> ESCRIBEME AL WHATSAPP</a>
+ 
+ 
+ <H5>ENCUENTRA EL BOTON CORRECTO</H5>
+ <button class="boton"
+   onclick="verificar(this)">Boton 1<button>
+     <button class="boton"
+     onclick="verificar(this)">Boton 2<button>
+       <button class="boton"
+       onclick="verificar(this)">Boton 3<button>
+ 
+         <div class="mensaje" id="resultado"></div>
+ 
+         <script>
+           const correcto =
+           Math.floor(Math.random() * 3);
+ 
+           function verificar(boton) {
+             const botones = 
+             document.querySelectorAll(".boton");
+             
+             const index = 
+             Array.from(botones).indexOf(boton);
+             const resultado =
+             document.getElementById("resultado");
+           if (index === correcto) { 
+             resultado.textContent = "CORRECTO!";
+             resultado.style.color = "lime"; 
+           } else { 
+             resultado.textContent = "INTENTA OTRA VEZ.";
+             resultado.style.color = "red";
+             }
+           }
+             
+    </script>
+ <br>
+ 
+ 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Juego - Adivina el Número</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #ff0077;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    #mensaje {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #00ff99;
+    }
+
+    .contenedor {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ff007766;
+      max-width: 400px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h1>🎯 Adivina el Número</h1>
+    <p>Estoy pensando en un número del 1 al 10. ¿Puedes adivinar cuál es?</p>
+    <input type="number" id="entrada" min="1" max="10">
+    <button onclick="adivinar()">Adivinar</button>
+    <p id="mensaje"></p>
+  </div>
+
+  <script>
+    let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+
+    function adivinar() {
+      let intento = parseInt(document.get
